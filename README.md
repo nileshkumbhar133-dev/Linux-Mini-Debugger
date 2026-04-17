@@ -1,66 +1,21 @@
-🧠 Linux Mini Debugger (ARM64)
+# Linux Mini Debugger
 
-A custom interactive debugger built in C using the "ptrace()" system call.
+A simple debugger built using ptrace on Linux (ARM64).
 
----
+## Features
+- Read registers (PC, SP, X registers)
+- Read memory
+- Set breakpoint using BRK instruction
+- Single step execution
+- Continue execution
 
-🚀 Features
+## Commands
+- regs → show registers
+- step → execute one instruction
+- continue → resume program
 
-- 🔍 Register inspection (PC, SP, general registers)
-- 🧠 Memory reading at runtime
-- 🛑 Breakpoint handling (ARM64 BRK instruction)
-- ▶️ Instruction-level stepping
-- 💻 Interactive CLI (regs, step, continue, exit)
-
----
-
-🛠️ Tech Stack
-
-- C Programming
-- Linux System Calls
-- ptrace API
-- ARM64 Architecture
-
----
-
-▶️ Usage
-
+## Build
 make
-gcc test.c -o test
+
+## Run
 ./debugger ./test
-
----
-
-💻 Commands
-
-Command| Description
-regs| Show registers
-step| Execute one instruction
-continue| Resume execution
-exit| Quit debugger
-
----
-
-📸 Example Output
-
-(debugger) regs
-PC: ffff...
-
-(debugger) step
-PC: ffff...
-
-(debugger) continue
-HELLO DEBUGGER!
-
----
-
-📚 What I Learned
-
-- Low-level process control using ptrace
-- Debugging internals and CPU execution flow
-- Memory and register inspection
-- Building CLI tools in C
-
----
-
-
